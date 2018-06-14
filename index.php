@@ -7,11 +7,11 @@
     <head>
         <meta name="google-signin-client_id" content="257579608945-s39jckt8dibrc1gv27gtgvvbkd2m5qv8.apps.googleusercontent.com">
         <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
-        <script>
+        <!-- <script>
         function init() {
             gapi.load('auth2', function() { // Ready. });
         });}
-        </script>
+        </script> -->
 
         <title>Project Requests</title>
         <script
@@ -24,23 +24,27 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
         <script>
-            function onSignIn(googleUser){
-                var profile = googleUser.getBasicProfile();
-                $(".g-signin2").css("display", "none");
-                $('.data').css("display", "block");
-                $('#pic').attr('src', profile.getImageUrl());
-                $('#email').text(profile.getEmail());
-            }
+            // function onSignIn(googleUser){
+            //     var profile = googleUser.getBasicProfile();
+            //     $(".g-signin2").css("display", "none");
+            //     $('.data').css("display", "block");
+            //     $('#pic').attr('src', profile.getImageUrl());
+            //     $('#email').text(profile.getEmail());
+            // }
+            //
+            // function signOut(){
+            //     var auth2 = gapi.auth2.getAuthInstance();
+            //     auth2.signOut().then(function(){
+            //         alert("Signed out YEP");
+            //
+            //         $(".g-signin2").css("display","block");
+            //         $(".data").css("display","none");
+            //     });
+            // }
+        </script>
 
-            function signOut(){
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function(){
-                    alert("Signed out YEP");
+        <script src="js/googleSignIn.js">
 
-                    $(".g-signin2").css("display","block");
-                    $(".data").css("display","none");
-                });
-            }
         </script>
 
         <style>
